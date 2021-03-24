@@ -16,7 +16,7 @@
             {% if username_error %}<p style="color: red">{{ username_error }}</p>{% endif %}<br>
             <label for="password">Password: </label><input name="password" value="{{ password }}">
             {% if password_error %}<p style="color: red">{{ password_error }}</p>{% endif %}<br>
-            <input type="hidden" name="next" value="{{ next_page }}">
+            {% if next_page != None %}<input type="hidden" name="next" value="{{ next_page }}">{% endif %}
             <button type="submit">Submit</button>
         </form>
     </body>
