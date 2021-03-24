@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Log in</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <h1>Login</h1>
+
+        <a href="{{ url_for('usercreate', next=next_page) }}">Don't have an account? Create one here.</a>
+
+        <form method="post">
+            <label for="username">Username: </label><input name="username" value="{{ username }}">
+            {% if username_error %}<p style="color: red">{{ username_error }}</p>{% endif %}<br>
+            <label for="password">Password: </label><input name="password" value="{{ password }}">
+            {% if password_error %}<p style="color: red">{{ password_error }}</p>{% endif %}<br>
+            <input type="hidden" name="next" value="{{ next_page }}">
+            <button type="submit">Submit</button>
+        </form>
+    </body>
+</html>

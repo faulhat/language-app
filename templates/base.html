@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        {% if user != None %}
+            <p>Logged in as {{ user.username }}</p>
+            <a href="{{ url_for('logout', next=request.path) }}">Log out</a>
+        {% else %}
+            <a href="{{ url_for('login', next=request.path) }}">Log in here</a>
+            <a href="{{ url_for('usercreate', next=request.path) }}">Create new user here</a>
+        {% endif %}
+
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>
