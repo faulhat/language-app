@@ -114,8 +114,11 @@ def usercreate():
         email = request.form['email']
         password = request.form['password']
 
-        if len(username) > 25:
-            username_error = 'Username is too long (limit is 25 chars)'        
+        username_re = '^[a-zA-Z0-9_]+$'
+        if len(username) > 40:
+            username_error = 'Username is too long (limit is 40 chars)'        
+        elif not re.search(username_re, username):
+            username_error = 'Username may only contain letters, numbers, and underscores.'
 
         regex = '^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$'
         if not re.search(regex, email):
