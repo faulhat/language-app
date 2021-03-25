@@ -18,4 +18,3 @@ TODO list
 + Perhaps create online deck-creation tool
 + Find a way to make deployment secure
 + Add CSS
-+ Perhaps convert to a single-page application.
