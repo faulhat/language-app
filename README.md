@@ -11,8 +11,6 @@ Then, execute the main script:
 $ python main.py
 ```
 
-ISSUE: Single-page or multi-page? Currently the app is multi-page. This could cause difficulty if we want to port the app to a different frontend later (non-browser, such as a mobile app or desktop app), for which an almost pure REST interface will be necessary. At this early stage as of 3/24/2021 it would be very easy to convert it into a single-page application, so we should make this decision quickly!
-
 TODO list
 + Allow login by email
 + Allow decks to be uploaded as JSON files
