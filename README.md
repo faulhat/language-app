@@ -12,7 +12,6 @@ $ python main.py
 ```
 
 TODO list
-+ Allow login by email
 + Allow decks to be uploaded as JSON files
 + Create deck catalog and user profiles
 + Create practice tool
